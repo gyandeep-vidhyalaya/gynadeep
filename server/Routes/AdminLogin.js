@@ -4,6 +4,7 @@ const Admin = require('../models/Admin');
 
 router.post('/adminlogin', async(req, res)=>{
     try{
+        console.log(req.body);
         const check = await Admin.findOne({username:req.body.username});
         if(check){
             if(check['password'] == req.body.password)
