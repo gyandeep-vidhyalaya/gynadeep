@@ -1,0 +1,10 @@
+@media screen and (max-width: 993px) {
+    .edit-profile-pic{
+        padding: 20px;
+    }
+    .edit-profile-pic>img{
+        height: 20vh;
+        width: 80vw;
+        border-radius: 20px;
+    }
+}

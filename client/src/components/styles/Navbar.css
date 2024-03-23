@@ -1,0 +1,53 @@
+:root{
+    --nav-bg : #0082e6;
+    --nav-fg : white;
+    --transition-time : 0.5s;
+}
+.navbar{
+    background-color: var(--nav-bg);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.nav-item{
+    padding: 5px 10px;
+}
+
+.navtext{
+    color: var(--nav-fg) !important;
+    font-weight: bold;
+    border-radius: 7px;
+}
+.invert{
+    filter: invert(1);
+}
+.navbar-collapse .navtext{
+    font-size: 23px;
+}
+.Left .navtext{
+    font-size: 25px;
+}
+
+@media screen and (min-width:993px) {
+    .navbar{
+        height: 12vh;
+    }
+    .dots{
+        display: none;
+    }
+    .navbar-collapse .navtext:hover{
+        color: var(--nav-bg) !important;
+        background-color: var(--nav-fg);
+        transition: var(--transition-time);
+    }
+}
+@media screen and (max-width:993px) {
+    .navbar-collapse .navtext{
+        padding-left: 30px;
+    }
+    .dots{
+        height: 20px;
+        width: 20px;
+    }
+}

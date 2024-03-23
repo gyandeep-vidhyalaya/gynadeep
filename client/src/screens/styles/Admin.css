@@ -1,0 +1,40 @@
+.Settings{
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+    height: 88vh;
+}
+.Left{
+    width: 20vw;
+    background-color: rgb(8, 0, 84);
+    position: sticky;
+    flex-wrap: wrap;
+    overflow-y: auto;
+}
+.Left ul{
+    margin-top: 20px;
+}
+.Left li{
+    list-style-type:none;
+}
+.Right{
+    width: 80vw;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+}
+@media screen and (max-width:993px) {
+    .Settings{
+        height: calc(100vh - 69.61px);
+    }
+    .Left{
+        width: 0vw;
+    }
+    .Right{
+        width: 100vw;
+        font-size: 10px;
+        justify-content: center !important;
+    }
+}

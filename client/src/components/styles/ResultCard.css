@@ -1,0 +1,18 @@
+.result-card{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.result-card img{
+    height: 90%;
+    width: 90%;
+    margin: auto;
+    border-radius: 20px;
+}
+@media screen and (max-width:993px) {
+    .result-card img{
+        height: 100%;
+        width: 100%;
+    }
+}

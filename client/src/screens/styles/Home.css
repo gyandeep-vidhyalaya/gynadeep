@@ -1,0 +1,18 @@
+.view-body {
+    overflow-y: scroll;
+    height: calc(100vh - 69.61px);
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.home-teacher, .home-activity{
+    width: 90%;
+}
+
+#HomeScreen {
+    height: 100vh;
+    overflow-y: hidden;
+}

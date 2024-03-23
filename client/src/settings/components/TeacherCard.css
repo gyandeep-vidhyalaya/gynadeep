@@ -1,0 +1,20 @@
+.card{
+    border-radius: 20px;
+    margin: 10px 10px;
+    height: fit-content;
+}
+.card > img{
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 20px;
+    height: 150px;
+    width: 90%;
+}
+.card .btns{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.btns button{
+    width: 45%;
+}

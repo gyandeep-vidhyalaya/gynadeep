@@ -1,0 +1,16 @@
+@media screen and (max-width:993px) {
+    .carousel{
+        width: 95% !important;
+    }
+    p{
+        width: 95% !important;
+    }
+}
+@media screen and (min-width:1070px) {
+    .carousel{
+        width: 60% !important;
+    }
+    p{
+        width: 70% !important;
+    }
+}

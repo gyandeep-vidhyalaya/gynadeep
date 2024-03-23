@@ -1,0 +1,48 @@
+.teacher-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; /* Add gap between cards */
+}
+.job-title{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.teacher-image{
+    border-radius: 27px;
+}
+
+@media screen and (max-width:1039px) {
+    .teacher-list {
+        grid-template-columns: 1fr 1fr;
+    }
+    .teacher-card{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:676px) {
+    .teacher-list {
+        grid-template-columns: 1fr;
+    }
+    .job-title{
+        margin-left: 0px;
+        text-align: center;
+    }
+    .teacher-card{
+        width: 90%;
+    }
+}
+.view-body .teacher-card{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

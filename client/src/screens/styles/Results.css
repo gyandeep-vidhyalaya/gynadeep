@@ -1,0 +1,23 @@
+.result-list{
+    margin-bottom: 50px;
+    width: 90%;
+}
+@media screen and (max-width:993px){
+    .result-list{
+        width: 92vw;
+    }
+}
+.view-body .result-card{
+    animation: fade linear both;
+    animation-timeline: view();
+    animation-range: entry 40% cover 40%;
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
