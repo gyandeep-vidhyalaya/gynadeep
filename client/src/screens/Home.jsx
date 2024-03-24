@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import Navbar from '../components/Navbar';
 import TeacherCard from '../components/TeacherCard'
-import ActivityCard from '../components/ActivityCard';
 
 import './styles/Home.css'
 import './styles/AboutUs.css'
@@ -36,6 +35,7 @@ const Home = () => {
       }
     });
 
+    
     const json = await response.json();
     if (!json['error'])
       setActivityData(json);
@@ -55,11 +55,14 @@ const Home = () => {
             <div className="home-activity">
               <h2>Activities</h2>
               <hr />
-              <div className='activity-list'>
+              <div className='home-activity-list'>
                 {
                   ActivityData.map((activity, index) => {
                     return (
-                      <ActivityCard key={index} activity={activity} />
+                      <div key={`activity${index}`} className="home-activity-card">
+                        <img src={activity.imgs[0]} alt="" />
+                        <h3>{activity.title}</h3>
+                      </div>
                     )
                   })
                 }

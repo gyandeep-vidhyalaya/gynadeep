@@ -5,7 +5,6 @@ const mongoURL = process.env.MONGO_URL;
 
 const mongoDB = async () => {
     await mongoose.connect(mongoURL);
-    console.log("Connected")
 };
 
 module.exports = mongoDB;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 const CLOUD_NAME = import.meta.env.VITE_CLOUD_NAME;
+const PRESET = import.meta.env.VITE_PRESET;
 import './styles/AddTeachers.css'
 
 const AddTeachers = () => {
@@ -68,7 +69,7 @@ const AddTeachers = () => {
 
     const formData = new FormData();
     formData.append('file', image);
-    formData.append('upload_preset', 'ksfbel3d');
+    formData.append('upload_preset', PRESET);
     formData.append('cloud_name', CLOUD_NAME);
 
     const image_request = await fetch(`https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`, {
@@ -92,7 +93,7 @@ const AddTeachers = () => {
       alert("Teacher Account Created Successfully");
     else
       alert("Something went Wrong Try Again");
-      setcreate('Create');
+    setcreate('Create');
 
   };
 
@@ -183,7 +184,7 @@ const AddTeachers = () => {
             textAlign: 'center',
             margin: 'auto'
           }}
-          disabled = {create != 'Create'}
+          disabled={create != 'Create'}
           type="submit"
         >
           {create}

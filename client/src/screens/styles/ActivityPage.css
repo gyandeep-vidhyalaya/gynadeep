@@ -1,15 +1,34 @@
+.activity-image-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.activity-image{
+    padding: 15px;
+}
+
+.activity-image > img{
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
 @media screen and (max-width:993px) {
-    .carousel{
-        width: 95% !important;
+    .activity-image{
+        padding: 10px;
+        margin: 10px;
+        width: 95vw;
+    }
+    .activity-image-list {
+        grid-template-columns: 1fr;
+    }
+    .activity-image > img{
+        height: 100%;
     }
     p{
         width: 95% !important;
     }
 }
 @media screen and (min-width:1070px) {
-    .carousel{
-        width: 60% !important;
-    }
     p{
         width: 70% !important;
     }
