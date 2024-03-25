@@ -26,7 +26,7 @@ router.post('/homeactivities', async (req, res) => {
             const j = Math.floor(Math.random() * (i + 1));
             [all_data[i], all_data[j]] = [all_data[j], all_data[i]]; // Swap elements
         }
-        res.json(all_data.slice(0, 4));
+        res.json(all_data.slice(0, 8));
     } catch (error) {
         res.sendStatus(400).json({ error: "Error Occured." });
     }

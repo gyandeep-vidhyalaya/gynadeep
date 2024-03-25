@@ -68,7 +68,7 @@ const RemoveActivity = () => {
                                 <td>{index + 1}</td>
                                 <td>{activity.title}</td>
                                 <td>
-                                    <Link to={`/activity/${activity._id}`}  target='_blank'>view</Link>
+                                    <Link to={`/activity/${activity._id}`}>view</Link>
                                 </td>
                                 <td>
                                     <button
