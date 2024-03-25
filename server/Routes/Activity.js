@@ -49,9 +49,7 @@ router.post('/deleteactivity', async (req, res) => {
             const imgUrl = imgs[i];
             const urlArray = imgUrl.split('/');
             const imageName = urlArray[urlArray.length - 1].split('.')[0];
-            await cloudinary.uploader.destroy(imageName, (err, result) => {
-                if(err)
-                    res.json({error:"Unable to Remove Image"});
+            await cloudinary.uploader.destroy(imageName, async (err, result) => {
             });
         }
         await Activity.findByIdAndDelete(req.body.id);
