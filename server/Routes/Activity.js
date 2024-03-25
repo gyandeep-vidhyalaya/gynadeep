@@ -47,6 +47,8 @@ router.post('/deleteactivity', async (req, res) => {
         const imgs = req.body.imgs;
         for(let i = 0; i < imgs.length; i++){
             const imgUrl = imgs[i];
+            if(imgUrl == null)
+                continue;
             const urlArray = imgUrl.split('/');
             const imageName = urlArray[urlArray.length - 1].split('.')[0];
             await cloudinary.uploader.destroy(imageName, async (err, result) => {
