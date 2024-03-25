@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 const RemoveActivity = () => {
@@ -67,7 +68,7 @@ const RemoveActivity = () => {
                                 <td>{index + 1}</td>
                                 <td>{activity.title}</td>
                                 <td>
-                                    <a href={`/activity/${activity._id}`}  target='_blank'>view</a>
+                                    <Link to={`/activity/${activity._id}`}  target='_blank'>view</Link>
                                 </td>
                                 <td>
                                     <button
